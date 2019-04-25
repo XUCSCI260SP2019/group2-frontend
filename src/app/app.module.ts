@@ -11,6 +11,10 @@ import { OktaAuthModule } from '@okta/okta-angular';
 import { AuthInterceptor } from './shared/okta/auth.interceptor';
 import { HomeComponent } from './home/home.component';
 
+import { MatRippleModule } from '@angular/material';
+
+
+
 const config = {
   issuer: 'https://dev-402557.okta.com/oauth2/default',
   redirectUri: 'http://localhost:4200/implicit/callback',
@@ -33,9 +37,11 @@ const config = {
     MatListModule,
     MatToolbarModule,
     FormsModule,
+    MatRippleModule,
     OktaAuthModule.initAuth(config)
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

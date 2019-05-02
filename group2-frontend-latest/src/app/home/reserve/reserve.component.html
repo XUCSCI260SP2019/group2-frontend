@@ -1,0 +1,34 @@
+<div class="container custom-container">
+  <div class="col-md-12">
+    <h3 class="mb-3 text-center">Reserve Room</h3>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="eventDetails.id" class="form-control" placeholder="Event ID">
+    </div>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="eventDetails.name" class="form-control" placeholder="Event Name">
+    </div>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="eventDetails.startTime" class="form-control" placeholder="Start Time">
+    </div>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="eventDetails.requestor" class="form-control" placeholder="Your Name">
+    </div>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="eventDetails.room" class="form-control" placeholder="{{roomN}}">
+    </div>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="eventDetails.isConfirmed" class="form-control" placeholder="false">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" (click)="addEvent()">Reserve the Room</button>
+    </div>
+
+  </div>
+</div>

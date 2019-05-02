@@ -1,0 +1,21 @@
+<mat-toolbar color="warn">
+
+  <img class="contain" src="assets/img/Xavier_Musketeers_logo.png" alt="Xavier" style="width:75px;height:75px">
+  <h2>Alter Room Reservation</h2>
+  <span class="toolbar-spacer"></span>
+<button mat-raised-button color="accent" *ngIf="!isAuthenticated"
+        (click)="oktaAuth.loginRedirect()">Login
+</button>
+  <button mat-raised-button color= "accent" *ngIf="isAuthenticated"
+          [routerLink]="['/home']">Home
+  </button>
+  <button mat-raised-button color= "accent" *ngIf="isAuthenticated"
+          [routerLink]="['/admin-panel']">Admin Dashboard
+  </button>
+  <button mat-raised-button color= "accent" *ngIf="isAuthenticated"
+          (click)="oktaAuth.logout()" [routerLink]="['/home']">Logout
+  </button>
+</mat-toolbar>
+<div align = "center" class="imageContainer" *ngIf="!isAuthenticated"><img src="assets/img/home_image.jpg" alt="Alter"></div>
+
+<router-outlet></router-outlet>

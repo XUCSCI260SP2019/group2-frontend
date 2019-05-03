@@ -1,11 +1,10 @@
 <!-- Show it when there is no employee -->
 <div class="no-data text-center" *ngIf="Event.length == 0" align = "center">
-  <p>Let me find you some events to confirm ...</p>
+  <p>We couldn't find any events to confirm!</p>
 </div>
 
 <!-- Employees list table, it hides when there is no employee -->
 <div *ngIf="Event.length !== 0" align = "center">
-  <h3 class="mb-3 text-center">Events to Confirm</h3>
 
   <div class="col-md-12" >
     <table class="table table-bordered" style="display: inline-block; float:center;">
@@ -14,19 +13,24 @@
 
       </tr>
       </thead>
+      <div class = "scroll">
+        <th><b>ID</b></th>
+        <th><b>Name</b></th>
+        <th><b>Requestor</b></th>
+        <th><b>Room Number</b></th>
+        <th><b>Start Time</b></th>
       <tbody>
       <tr *ngFor="let event of Event">
-      <b>Event ID</b>
         <td> {{event.id}}</td>
-      <b>Event Name</b>
         <td> {{event.name}}</td>
-      <b>Event Requestor</b>
         <td> {{event.requestor}}</td>
-        <b>Event Room</b>
         <td> {{event.room}}</td>
-      <b>Event Start Time</b>
         <td> {{event.startTime}}</td>
+        <button class="delete" (click)="deleteEvent(event.id)">Delete</button>
+        <button class="delete" (click)="updateEvent(event.id)">Confirm</button>
+
       </tbody>
+      </div>
     </table>
   </div>
 </div>

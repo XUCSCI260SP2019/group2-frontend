@@ -46,13 +46,29 @@ export class RestApiService {
         )
       }
 
-
+    // create event
      createEvent(Event): Observable<Event> {
         return this.http.post<Event>(this.apiURL + '/events', JSON.stringify(Event), this.httpOptions)
         .pipe(
           retry(1)
         )
       }
+
+      //delete event
+      deleteEvent(id){
+                return this.http.delete<Event>(this.apiURL + '/events/' + id, this.httpOptions)
+                  .pipe(
+                    retry(1),
+                    catchError(this.handleError)
+            }
+
+       updateEvent(id) {
+           return this.http.post(this.apiURL + '/confirm/' + id, this.httpOptions)
+           .pipe(
+             retry(1),
+             catchError(this.handleError)
+           )
+         }
 
 
 }

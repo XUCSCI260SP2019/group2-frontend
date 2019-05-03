@@ -28,5 +28,20 @@ export class AdminPanelComponent implements OnInit {
                this.Event = data;
              })
            }
+ // Delete event
+  deleteEvent(id) {
+    if (window.confirm('Are you sure you want to delete this?')){
+      this.restApi.deleteEvent(id).subscribe(data => {
+      this.loadPending()
+      })
+    }
+  }
 
+  updateEvent(id) {
+      if(window.confirm('Are you sure you want to confirm this?')){
+        this.restApi.updateEvent(id).subscribe(data => {
+          this.loadPending()
+        })
+      }
+    }
 }

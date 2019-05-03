@@ -29,9 +29,11 @@ export class ReserveComponent implements OnInit {
 
       }
    addEvent(dataEvent) {
+       if (window.confirm('Are you sure you want to submit this request?')){
        this.restApi.createEvent(this.eventDetails).subscribe((data: {}) => {
          this.router.navigate(['/home'])
        })
+     }
      }
 
 }

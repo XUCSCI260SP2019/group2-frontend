@@ -10,5 +10,8 @@ object-fit: contain;
 
 .imageContainer{
 
+	margin: 50px auto;
+	border-radius: 10px;
+}
 
-    }
+

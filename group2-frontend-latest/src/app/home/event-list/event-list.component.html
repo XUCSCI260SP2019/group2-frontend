@@ -51,54 +51,51 @@
     background-color: rgb(159, 162, 162);
     color: white;
   }
-  /*Dropdown Menues*/
-  .dropbtn {
-    background-color: rgb(159, 162, 162);
-    color: white;
-    padding 16px;
-    font-size: 16px;
-    padding: 160px
-    border: none;
-  }
-  .dropdown{
-    position: relative;
-    display: inline-block;
-  }
-  .dropdown-content {
-    display:none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    boxshadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  .dropdown-content a {
-    color: rgb(159, 162, 162);
-    padding: 12px 16px;
-    text decoration: none;
-    display:block;
-  }
-  .dropdown-content a:hover {
-    background-color:#ddd
-  }
-.dropdown:hover .dropdown-content{
-  display: block;
-}
-.dropdown:hover .dropbtn{
-  background-color: #3e8e41
-}
-a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
 
-    text-decoration: none;
-    color: initial;
 }
+
   /**/
 </style>
-<div class="container custom-container-2" *ngIf="isAuthenticated">
-  <table style="display: inline-block; float:left">
+
+<div class="header">
+  <h1>Alter Room Request</h1>
+</div>
+
+<div class="topnav">
+
+  <div *ngIf = "!isAuthenticated" align = "center">
+    <p>  <a href="http://localhost:4200">Login</a>!</p>
+  </div>
+
+  <!-- Show it when there is no employee -->
+  <div class="no-data text-center" *ngIf="int.length == 0" align = "right">
+  </div>
+
+  <!-- Employees list table, it hides when there is no employee -->
+  <div *ngIf="int.length !== 0" align = "center">
+    <div class="col-md-12" >
+        <tbody>
+        <tr *ngFor="let int of int">
+          <td><a href="http://localhost:4200/home/reserve?room={{int}}" class="button">Book Me!</a></td>
+        </tr>
+        </tbody>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="month">
+  <h1>May</h1>
+</div>
+
+
+
+<div color="accent" *ngIf="isAuthenticated">
+
+  <table id = "calendar">
     <tr>
       <th>  </th>
       <th>Mon</th>
@@ -561,37 +558,6 @@ a.button {
     </tr>
 
   </table>
-  <!-- Show it when there is no employee -->
-  <div class="no-data text-center" *ngIf="int.length == 0" align = "right">
-    <p>Let me find you some rooms ...</p>
-  </div>
-
-  <!-- Employees list table, it hides when there is no employee -->
-  <div *ngIf="int.length !== 0" align = "center">
-    <h3 class="mb-3 text-center">Available Rooms</h3>
-
-    <div class="col-md-12" >
-      <table class="table table-bordered" style="display: inline-block; float:center;">
-        <thead>
-        <tr>
-
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let int of int">
-          <td> Alter {{int}}</td>
-          <td><a href="http://localhost:4200/home/reserve?room={{int}}" class="button">Book Me!</a></td>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
 
 </div>
 
-<div *ngIf = "!isAuthenticated" align = "center">
-  <br />
-  <p>Hold up there partner</p>
-  <br />
-  <p>You must have not been cool enough to <a href="http://localhost:4200">login</a>!</p>
-</div>

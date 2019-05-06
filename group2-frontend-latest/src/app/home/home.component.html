@@ -24,11 +24,7 @@
     padding: 4px 16px;
     text-decoration: none;
   }
-  /* Change color on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+
   /* Header for the month*/
   .month {
     padding:25px 25px;
@@ -53,48 +49,20 @@
     color: white;
   }
 
+
+
   /**/
 </style>
+
+
 <mat-card>
+
   <mat-card-content>
-
-    <div class="header">
-      <h1>Alter Room Request</h1>
-    </div>
-
-    <div class="topnav">
-
-      <div *ngIf = "!isAuthenticated" align = "center">
-        <p>  <a href="http://localhost:4200">Login</a>!</p>
-      </div>
-
-      <!-- Show it when there is no employee -->
-      <div class="no-data text-center" *ngIf="int.length == 0" align = "right">
-      </div>
-
-      <!-- Employees list table, it hides when there is no employee -->
-      <div *ngIf="int.length !== 0" align = "center">
-        <div class="col-md-12" >
-          <tbody>
-          <tr *ngFor="let int of int">
-            <td><a href="http://localhost:4200/home/reserve?room={{int}}" class="button">Book Me!</a></td>
-          </tr>
-          </tbody>
-
-        </div>
-      </div>
-
-    </div>
 
 
     <div class="month">
       <h1>May</h1>
     </div>
-
-
-
-    <div color="accent" *ngIf="isAuthenticated">
-
 
       <table id = "calendar">
         <tr>
@@ -109,22 +77,22 @@
           <td>7 am</td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=7';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=7';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=7';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=7';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
@@ -138,27 +106,27 @@
           <td> 8 am</td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=8';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=8';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=8';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=8';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=8';"class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -166,27 +134,27 @@
           <td> 9 am</td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=9';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=9';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=9';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=9';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=9';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -194,27 +162,27 @@
           <td> 10 am</td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=10';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=10';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=10';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=10';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=10';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -222,27 +190,27 @@
           <td> 11 am</td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=11';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=11';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=11';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=11';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=11';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -250,81 +218,81 @@
           <td> 12 pm</td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=12';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=12';"  class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=12';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=12';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=12';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         <tr>
           <td> 1 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=13';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=13';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=13';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=13';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=13';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         <tr>
           <td> 2 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=14';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=14';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=14';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=14';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=14';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -332,27 +300,27 @@
           <td> 3 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=15';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=15';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=15';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=15';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=15';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -360,27 +328,27 @@
           <td> 4 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=16';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=16';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=16';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=16';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=16';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -389,27 +357,27 @@
           <td> 5 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=17';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=17';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=17';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=17';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=17';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -418,27 +386,27 @@
           <td> 6 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=18';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=18';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=18';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=18';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=18';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -447,27 +415,27 @@
           <td> 7 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=19';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=19';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=19';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=19';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=19';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -476,27 +444,27 @@
           <td> 8 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=20';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=20';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=20';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=20';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=20';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -505,27 +473,27 @@
           <td> 9 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=21';" class ="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=21';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=21';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=21';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=21';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-            
+
           </div>
           </td>
         </tr>
@@ -534,7 +502,7 @@
           <td> 10 pm </td>
           <td> <div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=22';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-         </div>
+          </div>
           </td>
           <td><div class="dropdown">
             <button onclick="location.href = 'http://localhost:4200/home/event-list?time=22';" class="dropbtn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
@@ -559,6 +527,7 @@
         </tr>
 
       </table>
+    <div color="accent" *ngIf="isAuthenticated">
     </div>
   </mat-card-content>
 </mat-card>

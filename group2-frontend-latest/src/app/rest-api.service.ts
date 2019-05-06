@@ -34,7 +34,6 @@ export class RestApiService {
       return this.http.get<number>(this.apiURL + '/events/time/' + time)
       .pipe(
         retry(1),
-        catchError(this.handleError)
       )
     }
 

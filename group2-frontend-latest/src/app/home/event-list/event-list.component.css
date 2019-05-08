@@ -28,6 +28,10 @@
   }
 
   /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
 
   /* Header for the month*/
 
@@ -64,5 +68,64 @@
     border: none;
   }
 
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
 
-  /**/
+  .dropdown-content {
+    display:none;
+    background-color: white;
+    min-width: 160px;
+    boxshadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: rgb(159, 162, 162);
+
+    display:block;
+  }
+
+  .dropdown-content a:hover {
+    background-color:#ddd
+  }
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+.dropdown:hover .dropbtn{
+  background-color: #3e8e41
+}
+
+.scrollable {
+        overflow:scroll;
+        height:300px;
+        width:175px;
+        	background: #FAFAFA;
+        	padding: 30px;
+        	margin: 50px auto;
+        	box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.35);
+        	border-radius: 10px;
+        	border: 6px solid #305A72;
+
+}
+.submit {
+	-moz-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #3985B1;
+	box-shadow: inset 0px 1px 0px 0px #3985B1;
+	background-color: #216288;
+	border: 1px solid #17445E;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	padding: 8px 18px;
+	text-decoration: none;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+
+.submit:hover {
+	background: linear-gradient(to bottom, #2D77A2 5%, #337DA8 100%);
+	background-color: #28739E;
+}
